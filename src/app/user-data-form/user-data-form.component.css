@@ -1,0 +1,41 @@
+.user-data-label {
+  text-align: right;
+  margin-top: 7px;
+}
+
+.user-header {
+  padding: 50px 0px;
+};
+
+
+.col-xs-8.col-xs-offset-2.hello-bar {
+  padding: 50px;
+  text-align: center;
+}
+
+.hello-bar {
+  padding: 50px 0;
+  text-align: center;
+}
+
+.hello-bar span {
+  padding: 20px 20px;
+  color: white;
+  background-color: #337ab7;
+  border-color: #2e6da4;
+  border-radius: 4px;
+}
+
+.invalid-data-alert {
+  margin-top: 4px;
+  border: 2px solid darkorange;
+  border-radius: 4px;
+  background-color: orange;
+  color: white;
+  text-align: center;
+}
+
+.user-input-div {
+  padding-right: 0px;
+  padding-left: 0px;
+}

@@ -1,0 +1,74 @@
+<form [formGroup]="rForm">
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="row">
+        <div class="col-md-4 col-md-offset-2 col-xs-10 col-xs-offset-1 user-header">
+          <h2>User Data</h2>
+        </div>
+      </div>
+      <div class="row form-group">
+        <label for="userName" class="user-data-label col-xs-4">Name:</label>
+        <div class="col-md-4 col-xs-8 user-input-div">
+          <input
+            type="text"
+            autofocus
+            class="form-control"
+            formControlName="userName"
+            id="userName"
+            [(ngModel)]="userName">
+        </div>
+        <div
+          class="col-xs-12 col-sm-offset-4 col-sm-8 col-md-3 col-md-offset-0 invalid-data-alert"
+          *ngIf="!rForm.controls['userName'].valid && rForm.controls['userName'].dirty">
+          {{userNameAlert}}
+        </div>
+      </div>
+      <div class="row form-group">
+        <label for="userSurname" class="user-data-label col-xs-4">Surname:</label>
+        <div class="col-md-4 col-xs-8 user-input-div">
+          <input
+            type="text"
+            class="form-control"
+            formControlName="userSurname"
+            id="userSurname"
+            [(ngModel)]="userSurname">
+        </div>
+        <div
+          class="col-xs-12 col-sm-offset-4 col-sm-8 col-md-3 col-md-offset-0 invalid-data-alert"
+          *ngIf="!rForm.controls['userSurname'].valid && rForm.controls['userSurname'].dirty">
+          {{userSurnameAlert}}
+        </div>
+      </div>
+      <div class="row form-group">
+        <label for="userAge" class="user-data-label col-xs-4">Age:</label>
+        <div class="col-md-4 col-xs-8 user-input-div">
+          <input
+            type="text"
+            class="form-control"
+            formControlName="userAge"
+            id="userAge"
+            [(ngModel)]="userAge">
+        </div>
+        <div
+          class="col-xs-12 col-sm-offset-4 col-sm-8 col-md-3 col-md-offset-0 invalid-data-alert"
+          *ngIf="!rForm.controls['userAge'].valid && rForm.controls['userAge'].dirty">
+          {{userAgeAlert}}}
+        </div>
+      </div>
+      <div class="row form-group" *ngIf="userName !== '' && rForm.controls['userName'].valid && userSurname !== '' && rForm.controls['userSurname'].valid">
+        <div class="col-md-4 col-md-offset-4 col-xs-10 col-xs-offset-1 hello-bar" >
+          <span>Hello {{userName}} {{userSurname}} !</span>
+        </div>
+      </div>
+      <div class="row form-group">
+        <button
+          class="btn btn-primary col-xs-4 col-xs-offset-4"
+          (click)="addUserData()"
+          [disabled]="!rForm.valid"
+          [routerLinkActive]="['active']"
+          [routerLinkActiveOptions]="{exact:true}"
+          routerLink="/userPage">Save</button>
+      </div>
+    </div>
+  </div>
+</form>

@@ -1,0 +1,13 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~bootstrap/dist/css/bootstrap.min.css';
+@import './app/user-data-form/user-data-form.component.css';
+
+body {
+  padding: 10px
+}
+
+.row {
+  margin: 15px 0px
+}
+
+

@@ -1,0 +1,16 @@
+<form>
+  <div class="row">
+    <div class="row form-group">
+      <div class="welcome-bar col-xs-12 col-md-8 col-md-offset-2">
+        <span>{{userName}} {{userSurname}} Page</span>
+      </div>
+    </div>
+    <div class="row form-group">
+      <button class="btn btn-primary col-xs-4 col-xs-offset-4 col-md-2 col-md-offset-5 access-btn" (click)="validateAge()">access</button>
+    </div>
+    <div class="greybox">
+        <div class="row form-group picture" *ngIf="valid" ></div>
+    </div>
+    <div class="col-xs-4 col-xs-offset-4 invalid-data-alert" *ngIf="showAlert">{{userAgeAlert}}</div>
+  </div>
+</form>
